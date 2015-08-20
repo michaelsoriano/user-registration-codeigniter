@@ -1,0 +1,16 @@
+nbproject/
+user_guide/
+application/cache/
+application/config/
+application/core/
+application/helper/
+application/hooks/
+application/language/
+application/libraries/
+application/logs/
+application/third_party/
+application/.htaccess
+application/index.html
+system/
+.htaccess
+index.php
