@@ -5,7 +5,6 @@ application/core
 application/helper
 application/hooks
 application/language
-application/libraries
 application/logs
 application/third_party
 application/views/errors
