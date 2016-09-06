@@ -43,13 +43,19 @@ class User_model extends CI_Model {
             );
         $query = $this->db->insert_string('tokens',$string);
         $this->db->query($query);
-        return $token;
+        return $token . $user_id;
         
     }
     
     public function isTokenValid($token)
     {
-        $q = $this->db->get_where('tokens', array('token' => $token), 1);        
+       $tkn = substr($token,0,30);
+       $uid = substr($token,30);      
+       
+        $q = $this->db->get_where('tokens', array(
+            'tokens.token' => $tkn, 
+            'tokens.user_id' => $uid), 1);                         
+               
         if($this->db->affected_rows() > 0){
             $row = $q->row();             
             
