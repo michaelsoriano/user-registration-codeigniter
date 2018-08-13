@@ -29,7 +29,7 @@ class Password {
 	{
 		// format: algorithm:iterations:salt:hash
 		if(function_exists('random_bytes')){ //IF > PHP 7.2
-			$salt = random_bytes(self::PBKDF2_SALT_BYTE_SIZE);
+			$salt = base64_encode(random_bytes(self::PBKDF2_SALT_BYTE_SIZE));
 		}else{
 			$salt = base64_encode(mcrypt_create_iv(self::PBKDF2_SALT_BYTE_SIZE, MCRYPT_DEV_URANDOM));
 		}
