@@ -102,7 +102,7 @@ class Main extends CI_Controller {
                 
                 $cleanPost = $this->security->xss_clean($post);
                 
-                $hashed = $this->password->create_hash($cleanPost['password']);                
+                $hashed = $this->password->create_hash($cleanPost['password']);    
                 $cleanPost['password'] = $hashed;
                 unset($cleanPost['passconf']);
                 $userInfo = $this->user_model->updateUserInfo($cleanPost);

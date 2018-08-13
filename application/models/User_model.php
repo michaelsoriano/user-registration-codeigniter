@@ -18,7 +18,9 @@ class User_model extends CI_Model {
                 'last_name'=>$d['lastname'],
                 'email'=>$d['email'],
                 'role'=>$this->roles[0], 
-                'status'=>$this->status[0]
+                'status'=>$this->status[0], 
+                'password'=> '', 
+                'last_login'=> ''
             );
             $q = $this->db->insert_string('users',$string);             
             $this->db->query($q);
