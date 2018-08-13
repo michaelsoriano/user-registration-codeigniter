@@ -17,6 +17,7 @@ Built mainly for tutorial purposes: http://michaelsoriano.com/building-a-user-re
 
 * Clone repo
 * Run SQL attached
+* Update .htaccess for base dir (its set to /user-registration-codeigniter/)
 * Navigate to your site
 
 ### INCLUDES CODEIGNITER 3.0.2
